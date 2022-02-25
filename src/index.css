@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+}
+
+.page{
+  width: 100vw;
+  height: 170vh;
+}
+
+.splide__pagination{
+  top: 1% !important;
+  position: fixed !important;
+  height: 5% !important;
+  margin: 0% !important;
+  padding: 0% !important;
+  width: 100% !important;
+}
+
+.splide__pagination li{
+  width: 25% !important;
+}
+
+.splide__pagination__page{
+  width: 80% !important;
+  height: 25px !important;
+  border-radius: 3px !important;
+}
+
+.splide__pagination__page.is-active{
+  transform: none !important;
+  background: #5a5a5a !important;
+}
+
+.splide__pagination__page:hover {
+  background: #a1a1a1 !important;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  height: 100vh;
+  left: -100vw;
+  width: 100vw;
+  font-size: 50%;
+  transition: left 0.3s ease-in-out;
+  
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .proper{
+  float: left;
+  padding-top: 30%;
+  width: 60vw;
+  height: inherit;
+  background-color: rgba(119, 119, 119, 0.822);
+}
+
+.sidebar .proper button{
+  width: 100%;
+  height: 10%;
+  border: 1px rgba(255, 255, 255, 0.233) solid;
+  font-size: 180%;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+.sidebar .proper button:hover{
+  background-color: rgba(255, 255, 255, 0.555);
+}
+
+.sidebar #close{
+  float: right;
+  width: 40vw;
+  height: 100vh;
+  background: none;
+  border: none;
+}
+
+#topbar{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 7%;
+  background-color: rgba(255, 255, 255, 0.76);
+  text-align: left;
+}
+
+#sidebarButton{
+  margin-top: 1.8vh;
+  margin-left: 1.8vh;
+  background: none;
+  border: none;
+}
+
+#sidebarButton svg{
+  width: 1.8em;
+  height: 1.8em;
+}
+
+
+.home{
+  overflow:hidden;
+}
+
+#landing{
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: 150vw;
+  background-image: url('https://wallpaperaccess.com/full/1806514.jpg');
+  background-attachment: fixed;
+}
+
+#moreinfo{
+  margin-top: 0vh;
+  width: 100%;
+  height: 73vh;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+#temperature{
+  padding-top: 12vh;
+  padding-left: 10vw;
+  width: 80vw;
+  height: 16vh;
+  padding-bottom: 59vh;
+}
+
+#hours{
+  height: 10vh;
+  width: 95vw;
+  padding-left: 2.5vw;
+}
+
+.linesInfo{
+  height: 6vh;
+  width: 88vw;
+  padding-left: 6vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.ext{
+  height: 12vh !important;
+}
+
+.blockInfo{
+  height: 18vh;
+  width: 88vw;
+  padding-left: 6vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.smallfore{
+  padding-top: 3vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  height: 24vh;
+}
+
+
+
+
+
+.coming{
+  background-color:rgba(105, 105, 105, 0.438);
+  border: 1px rgb(61, 61, 61) solid;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: inherit;
+}
+
+.forecast{
+  padding-top: 12%;
+  background-color: rgb(255, 255, 255);
+}
+
+.map{
+  background-color: rgb(0, 0, 0);
+}
