@@ -1,7 +1,7 @@
 import MoreInfo from './MoreInfo.js'
 import Coming from './Coming.js'
 
-const Landing = () => {
+const Landing = ({weatherData}) => {
   return (
     <div id="landing">
       <div id="temperature">
@@ -10,7 +10,7 @@ const Landing = () => {
       <div id="hours">
         <Coming name="Alexis" due="28.02"/>
       </div>
-      <MoreInfo />
+      <MoreInfo weatherData={weatherData}/>
     </div>
   )
 }

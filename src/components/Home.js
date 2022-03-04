@@ -1,10 +1,10 @@
 import Landing from './Landing.js'
 
 
-const Home = () => {
+const Home = ({weatherData}) => {
   return (
     <div className="page home">
-      <Landing />
+      <Landing weatherData={weatherData}/>
     </div>
   )
 }

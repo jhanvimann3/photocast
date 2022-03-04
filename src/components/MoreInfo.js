@@ -1,6 +1,8 @@
 import Coming from './Coming.js'
+import Humidity from './Humidity.js'
 
-const MoreInfo = () => {
+const MoreInfo = ({weatherData}) => {
+  console.log(weatherData)
   return (
     <div id="moreinfo">
       __________________________________________
@@ -16,7 +18,7 @@ const MoreInfo = () => {
       </div>
 
       <div className="linesInfo ext">
-        <Coming name="Navid" due="28.02" comment={"isMetric : boolean"}/>
+        <Humidity humidity="10%" cloud="40%" visibility={weatherData['visibility']}/> 
       </div>
 
       <div className="blockInfo">
