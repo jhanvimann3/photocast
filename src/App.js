@@ -9,6 +9,7 @@ import Forecast from "./components/Forecast.js";
 import Map from "./components/Map.js";
 import Topbar from "./components/Topbar.js";
 import Sidebar from "./components/Sidebar.js";
+import { ImSearch } from "react-icons/im";
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         return await (await response.json());
     }
 
+    const [isMetric, setIsMetric] = useState(true);
+    const [largeFont, setLF] = useState(false);
     const [showSidebar, setSidebar] = useState(false);
     const [weatherData, setWeatherData] = useState({});
     const initRender = useRef(true)
@@ -61,6 +64,18 @@ function App() {
         setSidebar(!showSidebar);
     };
 
+    const setMetric = () =>{
+        setIsMetric(true);
+    };
+
+    const setWrong = () =>{
+        setIsMetric(false);
+    };
+
+    const toggleLF = () =>{
+        setLF(!largeFont);
+    }
+
 
     if(initRender.current){
         return (
@@ -70,9 +85,17 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className={largeFont? "App largeFont":"App"}>
             <Topbar toggle={toggleSide}/>
-            <Sidebar showSidebar={showSidebar} toggle={toggleSide}/>
+            <Sidebar 
+                showSidebar={showSidebar} 
+                toggle={toggleSide} 
+                toggleMetric={setMetric} 
+                toggleImperial={setWrong} 
+                isMetric={isMetric}
+                toggleLF={toggleLF} 
+                isLF={largeFont} 
+            />
             <Splide
                 options={{
                     arrows: false,
@@ -80,7 +103,7 @@ function App() {
                 }}
             >
                 <SplideSlide>
-                    <Home weatherData={weatherData}/>
+                    <Home weatherData={weatherData} isMetric={isMetric}/>
                 </SplideSlide>
                 <SplideSlide>
                     <Forecast/>

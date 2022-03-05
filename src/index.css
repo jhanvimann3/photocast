@@ -1,6 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.largeFont{
+  font-size: 130%;
 }
 
 .page{
@@ -54,22 +58,60 @@ body {
 
 .sidebar .proper{
   float: left;
-  padding-top: 30%;
   width: 60vw;
   height: inherit;
-  background-color: rgba(119, 119, 119, 0.822);
+  background-color: rgb(255, 255, 255);
 }
 
-.sidebar .proper button{
-  width: 100%;
-  height: 10%;
-  border: 1px rgba(255, 255, 255, 0.233) solid;
+.sidebar .proper img{
+  margin-top: 20%;
+  margin-bottom: 10%;
+  z-index: 11;
+  width: 60%;
+}
+
+.sidebar .proper .label{
+  width: 82%;
+  padding: 4%;
+  margin-top: 4%;
+  margin-left: 4%;
+  border: 1px rgba(0, 0, 0, 0.233) solid;
+  border-radius: 10px;
   font-size: 180%;
-  background-color: rgba(255, 255, 255, 0.322);
+  background-color: rgba(71, 71, 71, 0.322);
 }
 
-.sidebar .proper button:hover{
-  background-color: rgba(255, 255, 255, 0.555);
+.sidebar .proper .label button{
+  margin-top: 4%;
+  font-size: 120%;
+  border-radius: 5px;
+  width: 90%;
+  background-color: white;
+}
+
+.sidebar .proper .label #selected{
+  font-weight: bold; 
+  background-color: #a1a1a1;
+}
+
+.sidebar .proper .label svg{
+  width: 25%;
+  height: 25%;
+}
+
+.sidebar .proper #closeSmall{
+  width: 92%;
+  padding: 4%;
+  margin-top: 20%;
+  margin-left: 0%;
+  border: none;
+  border-radius: 10px;
+  font-size: 180%;
+  background-color: rgba(71, 71, 71, 0.089);
+}
+.sidebar .proper #closeSmall svg{
+  width: 25%;
+  height: 25%;
 }
 
 .sidebar #close{
@@ -78,6 +120,7 @@ body {
   height: 100vh;
   background: none;
   border: none;
+  backdrop-filter: blur(2px);
 }
 
 #topbar{
