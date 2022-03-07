@@ -1,3 +1,5 @@
+import {AiOutlineCloud} from "react-icons/ai"
+
 const Humidity = ({humidity,visibility,cloud}) => {
     return (
     <div id="float-container">
@@ -6,7 +8,7 @@ const Humidity = ({humidity,visibility,cloud}) => {
             Visibility: {visibility}</div>  
         </div>
         <div id="float-child">
-            <div class="cloud">Cloud cover:<br></br><b>{cloud}</b></div>
+            <div class="cloud"><AiOutlineCloud/>Cloud cover:<br></br><b>{cloud}</b></div>
             <br></br><br></br>
         </div>
     </div>

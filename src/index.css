@@ -33,11 +33,11 @@ body {
 
 .splide__pagination__page.is-active{
   transform: none !important;
-  background: #5a5a5a !important;
+  background: #ACA7CB !important;
 }
 
 .splide__pagination__page:hover {
-  background: #a1a1a1 !important;
+  background: #474554 !important;
 }
 
 .sidebar {
@@ -60,7 +60,7 @@ body {
   float: left;
   width: 60vw;
   height: inherit;
-  background-color: rgb(255, 255, 255);
+  background-color: #FFFFFF;
 }
 
 .sidebar .proper img{
@@ -78,7 +78,7 @@ body {
   border: 1px rgba(0, 0, 0, 0.233) solid;
   border-radius: 10px;
   font-size: 180%;
-  background-color: rgba(71, 71, 71, 0.322);
+  background-color: #aca7cb71;
 }
 
 .sidebar .proper .label button{
@@ -91,7 +91,7 @@ body {
 
 .sidebar .proper .label #selected{
   font-weight: bold; 
-  background-color: #a1a1a1;
+  background-color: #ACA7CB;
 }
 
 .sidebar .proper .label svg{
@@ -107,7 +107,7 @@ body {
   border: none;
   border-radius: 10px;
   font-size: 180%;
-  background-color: rgba(71, 71, 71, 0.089);
+  background-color: #aca7cb71;
 }
 .sidebar .proper #closeSmall svg{
   width: 25%;
@@ -243,7 +243,7 @@ body {
 }
 
 .map{
-  background-color: rgb(0, 0, 0);
+  background-color: #ACA7CB;
 }
 
 #float-container{
@@ -260,4 +260,56 @@ body {
    float: left;
    padding-top: 0px;
  
+ }
+
+
+ #TimesTop {
+   color: white;
+ }
+ 
+ #TableTime {
+   width: 100%;
+   padding-bottom: 0%;
+   margin-bottom: 0%;
+ }
+ 
+ #Sunrise {
+   text-align: center;
+   width: 25%;
+ }
+ 
+ #Sunset {
+   text-align: center;
+   width: 25%;
+ }
+ 
+ #CurTime{
+  -webkit-text-stroke: 1px black;
+  text-shadow: 
+  -1px -1px 0 black,
+  -1px 1px 0 black,
+  1px -1px 0 black,
+  1px 1px 0 black,
+  ;
+   text-align: center;
+   width: 50%;
+   font-size: 30pt;
+ }
+ 
+ #GoldenHour{
+   font-size: 120%;
+   width: 100%;
+ }
+ 
+ #ddtable {
+   width: 100%;
+   padding: 0%;
+ }
+ 
+ #Dawn{
+   width: 50%;
+ }
+ 
+ #Dusk{
+   width: 50%;
  }

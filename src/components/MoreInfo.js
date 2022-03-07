@@ -1,5 +1,7 @@
 import Coming from './Coming.js'
 import Humidity from './Humidity.js'
+import Exposure from './Exposure.js'
+import DawnDusk from './DawnDusk.js'
 
 const MoreInfo = ({weatherData}) => {
   console.log(weatherData)
@@ -7,10 +9,10 @@ const MoreInfo = ({weatherData}) => {
     <div id="moreinfo">
       __________________________________________
       <div className="linesInfo">
-        <Coming name="Alexis" due="28.02"/>
+        <DawnDusk sunrise={weatherData['current']['sunrise']} sunset={weatherData['current']['sunset']}/>
       </div>
       <div className="linesInfo">
-        <Coming name="Mohammed" due="28.02" />
+        <Exposure cloudCover={weatherData['current']['clouds']}/>
       </div>
 
       <div className="blockInfo">
@@ -18,7 +20,7 @@ const MoreInfo = ({weatherData}) => {
       </div>
 
       <div className="linesInfo ext">
-        <Humidity humidity="10%" cloud="40%" visibility={weatherData['visibility']}/> 
+        <Humidity humidity={weatherData['current']['humidity']} cloud={weatherData['current']['clouds']} visibility={weatherData['current']['visibility']}/> 
       </div>
 
       <div className="blockInfo">
