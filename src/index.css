@@ -246,22 +246,42 @@ body {
   background-color: #ACA7CB;
 }
 
-#float-container{
-  border: 3px solid #fff;
-  padding: 0;
- }
- 
- #float-container b{
-   font-size:large;
- }
+b{
+  font-size:125%;
+}
  
  #float-child{
+   font-size:125%;
+   box-sizing: content-box;
    width: 50%;
    float: left;
    padding-top: 0px;
- 
+   
  }
 
+ .humidity{
+   margin-left:6%;
+   text-align: left;
+   font-weight: bolder;
+ }
+
+ .cloud{
+   font-weight: bolder;
+   font-size: larger;
+ }
+
+ .coming{
+  background-color:rgba(105, 105, 105, 0.438);
+  border: 1px rgb(61, 61, 61) solid;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: inherit;
+}
+
+.day{
+  float:left;
+}
 
  #TimesTop {
    color: white;
