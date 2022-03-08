@@ -19,7 +19,7 @@ const MoreInfo = ({weatherData}) => {
         <Coming name="Jhanvi" due="4.03" />
       </div>
 
-      <div className="linesInfo ext">
+      <div className="linesInfo">
         <Humidity humidity={weatherData['current']['humidity']} cloud={weatherData['current']['clouds']} visibility={weatherData['current']['visibility']}/> 
       </div>
 
