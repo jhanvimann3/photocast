@@ -1,64 +1,79 @@
 const Coming = ({normalTemp, lowTemp, highTemp, isMetric, status}) => {
-    <div className="coming">
+  <div className="coming">
+
     var textMainTemp;
-    
-		<h1 class="normalTemp"></h1>
-   
+
     if(isMetric)
-      {
+    {
         textMainTemp = (normalTemp-273) + "°C"
     }
     else{
-        textMainTemp = ((normalTemp-273) * 1.8 + 32) + "°C"
+        textMainTemp = ((normalTemp-273) * 1.8 + 32) + "°F"
     }
-    
-        <h2 class="lowTemp"></h2>
-  
-       if(isMetric)
-      {
-        textMainTemp = (lowTemp-273) + "°C"
-    }
-    else{
-        textMainTemp = ((lowTemp-273) * 1.8 + 32) + "°C"
-    }
-    
-    <h3 class="highTemp"></h3>
-  
-        if(isMetric)
-      {
-        textMainTemp = (highTemp-273) + "°C"
-    }
-    else{
-        textMainTemp = ((highTemp-273) * 1.8 + 32) + "°C"
-    }
-  
-      return(
+    return(
         <div id="mainTemp">
-           {textMainTemp}
+            {textMainTemp}
         </div>
     )
-    </div>
-    
-    if(status="sunny")
+
+    var textLowTemp;
+
+    if(isMetric)
     {
-    <div class="sunny"></div>
-    }
-    else if(status="rainy")
-    {
-    <div class="rainy"></div>
-    }
-    else if(status="windy")
-    {
-    <div class="windy"></div>
-    }
-    else if(status="cold")
-    {
-    <div class="rainy"></div>
+        textLowTemp = (lowTemp-273) + "°C"
     }
     else{
-    <div class="pleasant"></div>
+        textLowTemp = ((lowTemp-273) * 1.8 + 32) + "°F"
     }
- 
+    return(
+        <div id="lowTemp">
+            {textLowTemp}
+        </div>
+    )
+
+    var textHighTemp;
+
+    if(isMetric)
+    {
+        textHighTemp = (highTemp-273) + "°C"
+    }
+    else{
+        textHighTemp = ((highTemp-273) * 1.8 + 32) + "°F"
+    }  
+    return(
+        <div id="highTemp">
+            {textHighTemp}
+        </div>
+    )
+
+</div>
 }
 
+    var textStatus;
+
+    if(normalTemp > 25)
+    {
+      status = "Sunny"
+    }   
+    else if(normalTemp < 25 && normalTemp > 21)
+    {
+      status = "Pleasant"
+    }
+    else if(normalTemp < 21 && normalTemp > 7)
+    {
+      status = "Cold"
+    }
+    else if(normalTemp < 7)
+    {
+      status = "Freezing"
+    }
+    else{
+      status = "Error"
+    }
+
+    return(
+      <div id="status">
+          {textStatus}
+      </div>
+    )
 export default Coming
